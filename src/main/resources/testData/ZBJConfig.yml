@@ -1,0 +1,8 @@
+baseURL:
+ baidu: "http://www.baidu.com"
+ENV:
+ test: "test"
+baiduPaths:
+ baidu_search: "/s"
+sysCommData:
+ userID: 13213

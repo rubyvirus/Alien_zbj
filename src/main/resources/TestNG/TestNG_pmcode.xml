@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="pmCode_suite">
+    <test name="订单pmcode统计">
+        <classes>
+            <class name="com.whatistest.test.web.pmCode.AddTask">
+            </class>
+        </classes>
+    </test>
+</suite>

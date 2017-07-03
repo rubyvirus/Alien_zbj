@@ -1,0 +1,14 @@
+testData: src/main/resources/testData
+testClass: src/main/java/com/whatistest/test
+# 预发布环境
+zookeeper: 172.26.20.162:2181
+# 测试环境
+#zookeeper: 192.168.143.34:2181
+confluence:
+ url: http://doc.zhubajie.la
+ name: lichuan
+ pwd: lichuan!@#$1234
+generateHttp:
+# default use last number
+ openPlatform: [13933508,13345798]
+ sellerUpdate: [20464442, 20463435, 20464308]

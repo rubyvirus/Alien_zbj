@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<!-- 项目所有测试集合-->
+<suite name="Alien_zbj all suites">
+    <listeners>
+        <listener class-name="com.whatistest.testng.listeners.AutoTestListener"/>
+        <listener class-name="com.whatistest.testng.listeners.ExtentTestNGIReporterListener"/>
+        <listener class-name="com.whatistest.testng.listeners.RetryListener"/>
+    </listeners>
+
+    <suite-files>
+        <suite-file path="TestNG/TestNG_pmcode.xml"/>
+    </suite-files>
+
+</suite>

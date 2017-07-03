@@ -1,0 +1,75 @@
+group 'com.whatistest'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+
+repositories {
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+}
+
+dependencies {
+
+    // springframework 相关依赖
+    compile group: 'org.springframework', name: 'spring-core', version: '4.3.8.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context', version: '4.3.8.RELEASE'
+    compile group: 'org.springframework', name: 'spring-test', version: '4.3.8.RELEASE'
+    compile group: 'org.springframework', name: 'spring-beans', version: '4.3.8.RELEASE'
+    compile group: 'org.springframework', name: 'spring-tx', version: '4.3.8.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context-support', version: '4.3.8.RELEASE'
+    compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.8.RELEASE'
+    compile group: 'org.springframework', name: 'spring-web', version: '4.3.8.RELEASE'
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '4.3.8.RELEASE'
+    compile group: 'org.springframework', name: 'spring-aop', version: '4.3.8.RELEASE'
+    compile group: 'org.springframework', name: 'spring-aspects', version: '4.3.8.RELEASE'
+    compile group: 'org.springframework', name: 'spring-expression', version: '4.3.8.RELEASE'
+
+    // test 相关依赖
+    compile group: 'org.testng', name: 'testng', version: '6.11'
+    compile group: 'com.aventstack', name: 'extentreports', version: '3.0.6'
+    compile group: 'io.rest-assured', name: 'rest-assured', version: '3.0.3'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.8.1'
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.32'
+    compile group: 'com.codeborne', name: 'selenide', version: '4.4.3'
+    compile group: 'org.assertj', name: 'assertj-core', version: '3.8.0'
+    compile group: 'org.assertj', name: 'assertj-guava', version: '3.1.0'
+    compile group: 'com.jayway.jsonpath', name: 'json-path', version: '2.3.0'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.9'
+
+
+    compile('com.alibaba:dubbo:2.5.3') {
+        exclude group: 'org.springframework'
+    }
+    compile group: 'com.101tec', name: 'zkclient', version: '0.10'
+    // yml 相关依赖
+    compile group: 'org.yaml', name: 'snakeyaml', version: '1.18'
+    // freemarker
+    compile group: 'org.freemarker', name: 'freemarker', version: '2.3.23'
+    // ehcache 相关依赖
+    compile group: 'net.sf.ehcache', name: 'ehcache', version: '2.10.4'
+    compile group: 'org.mongodb', name: 'mongo-java-driver', version: '3.4.2'
+    compile group: 'com.alibaba', name: 'druid', version: '1.0.31'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+
+    // apache
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
+
+    // 解析html
+    compile group: 'org.jsoup', name: 'jsoup', version: '1.10.3'
+
+    // 解析excel
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.16'
+
+    // 添加业务代码
+
+}
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
